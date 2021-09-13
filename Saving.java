@@ -8,9 +8,6 @@ class Saving extends Account {
 	 
 	 public Saving(int ir) 
 	 {
-			accNoCount++;
-			accNo = accNoCount;
-			
 			irate=ir;
 			transactions = new ArrayList<Transaction>();
 			deductions = new ArrayList<Deduction>();

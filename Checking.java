@@ -7,9 +7,6 @@ class Checking extends Account {
 	
 	public Checking() 
 	{
-		accNoCount++;
-		accNo = accNoCount;
-		
 		freedep=2;
 		transactions = new ArrayList<Transaction>();
 		deductions = new ArrayList<Deduction>();

@@ -8,12 +8,16 @@ public class Customer
 	private String name;
 	private int phone;
 	private String address;
-	private Saving savingsAcc;
-	private Checking checkingsAcc;
+	private static int accNoCount=0;
+	private int accNo;
+	public Saving savingsAcc;
+	public Checking checkingsAcc;
 	
 	
 	public Customer(String n, int p, String add, int scheck, int ir, int ccheck)// Name, Phone, Address, SavingCheck, InterestRate, CheckingCheck
 	{
+		accNoCount++;
+		accNo=accNoCount;
 		name = n;
 		phone = p;
 		address = add;
@@ -35,6 +39,11 @@ public class Customer
 		{
 			checkingsAcc=null;
 		}	
+	}
+	
+	public int getAccNo() 
+	{
+		return accNo;
 	}
 	
 	public void createSavingsAcc(int ir) 
